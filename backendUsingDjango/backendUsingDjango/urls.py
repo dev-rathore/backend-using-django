@@ -22,4 +22,5 @@ urlpatterns = [
   path('admin/', admin.site.urls),
   path('health/', views.health, name='health'),
   path('helloworld/', views.helloworld, name='helloworld'),
+  path('templaterender/', views.templaterender, name='templaterender'),
 ]
