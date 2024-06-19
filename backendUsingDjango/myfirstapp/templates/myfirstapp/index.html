@@ -5,5 +5,20 @@
 {% endblock %}
 
 {% block content %}
-  <h1>My First App</h1>
+  <h1 class="p-4 text-center">My First App</h1>
+
+  <div class="grid grid-cols-3 gap-4 m-4">
+    {% for data in datas %}
+      <div>
+        <img src="{{ data.image.url }}" alt="{{ data.name }}">
+        <h2>{{ data.name }}</h2>
+        <p>{{ data.occupation }}</p>
+        <a href="{% url 'my_first_app_detail' data.id %}">
+          <button class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
+            View
+          </button>
+        </a>
+      </div>
+    {% endfor %}
+  </div>
 {% endblock %}
