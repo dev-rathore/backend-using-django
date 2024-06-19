@@ -25,4 +25,6 @@ urlpatterns = [
   path('helloworld/', views.helloworld, name='helloworld'),
   path('templaterender/', views.templaterender, name='templaterender'),
   path('myfirstapp/', include('myfirstapp.urls')),
+
+  path('__reload__/', include('django_browser_reload.urls')),
 ]
