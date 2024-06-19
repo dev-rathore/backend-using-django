@@ -1,14 +1,8 @@
-*{
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+body main section {
+  padding: 1rem;
 }
 
-body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 100vh;
-  background-color: #161616;
-  color: #ffffff;
+body main section h1 {
+  color: rgb(3, 212, 244);
+  text-align: center;
 }
