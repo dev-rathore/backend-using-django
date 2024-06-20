@@ -1,0 +1,26 @@
+{% extends "layout.html" %}
+
+{% block title %}
+  Add Review Page
+{% endblock %}
+
+{% block content %}
+  <h1 class="p-4 text-center">Review Page</h1>
+
+  <div>
+    <form method="POST">
+      {% csrf_token %}
+      {{reviewsForm.as_p}}
+      <button type="submit">Submit</button>
+    </form>
+
+    {% if reviews %}
+      <h3>Reviews</h3>
+      <ul>
+        {% for review in reviews %}
+          <li>{{review.name}}</li>
+        {% endfor %}
+      </ul>
+    {% endif %}
+  </div>
+{% endblock %}

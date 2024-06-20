@@ -5,4 +5,5 @@ from . import views
 urlpatterns = [
   path('', views.my_first_app, name='my_first_app'),
   path('<int:id>/', views.my_first_app_detail, name='my_first_app_detail'),
+  path('review/', views.review, name='review'),
 ]
